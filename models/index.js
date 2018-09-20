@@ -1,4 +1,4 @@
 module.exports = {
-    Post: require("./Post"),
-    Comment: require("./Comment")
+    Post: require("./post"),
+    Comment: require("./comment")
   };
