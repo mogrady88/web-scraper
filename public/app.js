@@ -10,7 +10,8 @@ $(document).on("click",".comment", function() {
 
 //GET COMMENTS FROM DB
 function getComments(thisId){
-$(".all-comments").empty();
+$("#comment-title").text("");
+$("#comment-body").text("");
 console.log(thisId);
 $.ajax({
     method: "GET",
@@ -54,6 +55,7 @@ $(document).on("click","#add-comment-btn", function(event){
         console.log(data + " added to db");
       });
 getComments(thisId);
+
 });
 }
 

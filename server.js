@@ -27,8 +27,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/reddit";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
-// var db = mongoose.connection;
-
 //web-scraping
 function scrapeReddit(){
     request("https://old.reddit.com/r/fantasyfootball", function(error, res, html) {    
@@ -100,7 +98,7 @@ app.get("/", function(req,res){
 //LOAD COMMENTS
 app.get("/comments/:id", function (req,res){
     console.log("load comments");
-    // console.log(req.params.id);
+    console.log(req.params.id);
     db.Comment.find({postnum: req.params.id}).then(function(dbComments){
         console.log(dbComments)
         res.json(dbComments);
