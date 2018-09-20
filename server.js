@@ -25,7 +25,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // mongoose.connect("mongodb://localhost/reddit", { useNewUrlParser: true });
-var db = require("./models");
+// var db = require("./models");
+
+var db = mongoose.connection;
 
 //web-scraping
 function scrapeReddit(){
