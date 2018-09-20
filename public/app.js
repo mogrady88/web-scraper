@@ -10,6 +10,7 @@ $(document).on("click",".comment", function() {
 
 //GET COMMENTS FROM DB
 function getComments(thisId){
+$(".all-comments").empty();
 $("#comment-title").text("");
 $("#comment-body").text("");
 console.log(thisId);
