@@ -1,0 +1,43 @@
+table {
+    margin:0px 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr {
+    margin-bottom: 10px;
+}
+
+.comment {
+    border-style: 1px black solid;
+}
+
+#comment-title {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#comment-body {
+    width: 100%;
+}
+.modal-header, .all-comments{
+    background-color: cadetblue;
+}
+
+.modal-header {
+    border-bottom:1px solid black;
+}
+
+.container-fluid{
+    text-align: center;
+    line-height: 100%;
+    background-color: cadetblue;
+    height: 75px;
+}
+
+#comment-delete {
+    float: right;
+}

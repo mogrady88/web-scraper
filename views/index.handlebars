@@ -2,14 +2,16 @@
     <tbody>
         <tr>
             <th>Upvotes</th>
-            <th>Title</th>
-            <th>Pic</th>
+            <th>Story</th>
+            <th>Comments</th>
         </tr>
+        
+    {{#each posts}}
+    <tr class="results-table"></tr>
+    <td>{{upvotes}}</td>
+    <td><a href="https://old.reddit.com/{{link}}">{{title}}</a></td>
+    <td><button id={{_id}} type="button" class="comment" data-toggle="modal" data-target="#commentsModal">Comment</button></td>
+    </tr>
+    {{/each}}   
     </tbody>
 </table>
-
-<ul>
-    {{#each posts}}
-    <li>{{title}} - {{link}}</li>
-    {{/each}}
-</ul>
